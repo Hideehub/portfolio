@@ -1,0 +1,339 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+  margin-top:200px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.bg-image{
+    min-height: 700px;
+    background-image: url('images/laptop.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Overlay to make text more readable */
+.bg-image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: -1;
+  }
+  
+.navbar{
+    position: fixed; 
+    width: 100%; 
+    background-color: transparent;
+    z-index: 10; 
+    
+  }
+
+  .navbar.scrolled{
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .navbar.scrolled .nav-link {
+    color: #000 !important; 
+  }
+
+
+.navbar .nav-link {
+    color: #333; 
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 20px;
+  }
+
+.navbar .nav-link:hover {
+    color: tomato !important;
+  }
+
+
+  .mypic {
+    width: 400px; 
+    height: 400px;
+    object-fit: cover; 
+    margin-bottom: 20px; 
+    margin-top: 50px;
+  }
+
+  .bg-image h1{
+    color:tomato;
+  }
+
+  .logo{
+	font-size:50px;
+	padding:20px;
+	color:tomato !important;
+  font-size: 32px !important;
+}
+
+.navbar .logo:first-letter{
+	color:white;
+}
+
+.navbar.scrolled .logo:first-letter{
+	color:black;
+}
+
+.text-slider {
+    font-weight: bold;
+    color:white;
+    font-size: 1.5rem;
+  }
+
+
+.text-slider-items{
+    display: none;
+  }
+  
+
+.about-sect{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.box{
+    background: white;
+}
+
+.pic{
+    margin-top:4rem;
+	  width:60%;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.prog{
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-bottom: 4rem;
+}
+
+.abt-title {
+    margin-top: 3rem;
+  }
+
+  .underline {
+    font-size: 2rem;
+    position: relative;
+    padding-left:15px;
+  }
+  
+  .underline:before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: tomato;
+    width: 100px;
+    bottom: -12px;
+  }
+
+  .abt-me p{
+    font-size:20px;
+    padding:20px;
+  }
+
+.style-info{
+    border:2px solid tomato;
+    padding: 10px;
+    margin-left:20px;
+    margin-right:20px;
+    font-size: 16px;
+    margin-bottom: 3rem;
+}
+
+.subtitle {
+  position: relative; /* Allows us to position the line below the text */
+  padding-bottom:20px; /* Adds space between the text and the line */
+}
+
+.subtitle::after {
+  content: ""; /* Creates the line */
+  position: absolute; /* Positions the line relative to the text */
+  bottom: 0; /* Positions the line at the bottom of the subtitle */
+  left: 50%; /* Moves the start of the line to the center */
+  transform: translateX(-50%); /* Centers the line under the text */
+  width: 50px; /* Fixed width for the line */
+  height: 5px; /* Thickness of the line */
+  background-color: #ff5733; /* Color of the line */
+}
+
+
+.service-sect h1{
+  font-size: 3rem;
+}
+
+.service-sect h2{
+  font-size: 23px;
+}
+
+.service-sect .box {
+  background-color: #fff;
+  padding: 2.5rem 1.3rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.box .service-ico {
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+  margin-top: 1rem;
+}
+
+.box:hover .ico-circle {
+  transition: all 500ms ease;
+  color: #fff;
+  background-color: #ff5733;
+  box-shadow: 0 0 0 10px #615c5c;
+}
+
+.box .ico-circle {
+  font-size: 2rem;
+  border:10px solid tomato;
+  padding: 15px;
+  width:150px;
+  height:150px;
+  border-radius: 75px;
+}
+
+.stats-sect {
+  background-color: tomato;
+  padding: 100px;
+  margin-top: 70px;
+  margin-bottom:30px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(155, 146, 146, 0.1);
+  margin-bottom: 10px;
+}
+
+.stat-count {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+}
+
+.stat-card p {
+  font-size: 1.2rem;
+  color: #1a1919;
+}
+
+
+.projects-sect{
+  margin-bottom: 70px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-top:50px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #1b1a1a;
+}
+
+.project-info .btn {
+  margin-top: 10px;
+  background-color:#ff5733;
+  color:white;
+  margin-bottom: 30px;
+}
+
+.projects-sect h1{
+  font-size: 3rem;
+}
+
+
+.custom-footer {
+  position: relative;
+  background-image: url('images/overlay-bg.jpg'); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.footer-overlay {
+  background: rgba(0, 0, 0, 0.7); 
+  padding: 50px 0;
+}
+
+.container {
+  border: 2
+
+}
+
+.footer-box{
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  color: black;
+}
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-link {
+  margin: 0 15px;
+  font-size: 1.2rem;
+  color: tomato;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-link:hover {
+  color:rgb(235, 63, 33); 
+}
+
+footer .copyright {
+  margin-bottom:3rem;
+}
+
+

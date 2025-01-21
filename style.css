@@ -5,7 +5,6 @@
 }
 
 body{
-  margin-top:200px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -281,6 +280,10 @@ body{
   background-color:#ff5733;
   color:white;
   margin-bottom: 30px;
+}
+
+.project-info .btn:hover {
+  background-color: #b42404;
 }
 
 .projects-sect h1{
